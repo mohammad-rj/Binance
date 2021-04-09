@@ -6,7 +6,7 @@
 	<meta name="author" content="Kodinger">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
-	<title>Yoast Premium Adapter 認証システム &mdash; </title>
+	<title>CRIPT SYSTEM</title>
 	<link rel="stylesheet" type="text/css" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
