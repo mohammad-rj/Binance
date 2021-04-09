@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Admin\TopController;
+use App\Http\Controllers\Admin\ProfitManagement;
 
 /*
  * Access Controllers
@@ -44,6 +45,13 @@ Route::group(['namespace' => 'admin','prefix' => 'admin', 'as' => 'admin.'], fun
        
         // Authentication Routes
         Route::get('top', [TopController::class, 'index'])->name('top');
+        Route::get('userinfo', [TopController::class, 'index'])->name('userinfo');
+        Route::get('signal', [TopController::class, 'index'])->name('signal');
+        Route::get('logmanagement', [TopController::class, 'index'])->name('logmanagement');
+        Route::get('profitmanagement', [ProfitManagement::class, 'index'])->name('profitmanagement');
+        Route::get('mail', [TopController::class, 'index'])->name('mail');
+        Route::get('telegram', [TopController::class, 'index'])->name('telegram');
+        Route::get('admininfo', [TopController::class, 'index'])->name('admininfo');
        
     });
     

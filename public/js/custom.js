@@ -8,32 +8,32 @@ $( window ).on( "load", function() {
             $(".menu0").addClass('select');
             break;
 
-        case 'licenseManage':        //page1_1.php
+        case 'userinfo':        //page1_1.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_1").addClass('select');
             break;
-        case 'addLicense':      //page1_2.php
+        case 'signal':      //page1_2.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_2").addClass('select');
             break;
-        case 'plugin':    //page1_3.php
+        case 'logmanagement':    //page1_3.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_3").addClass('select');
             break;
 
-        case 'group-setting':       //page1_4.php
+        case 'profitmanagement':       //page1_4.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_4").addClass('select');
             break;
-        case 'sensor_setting':      //page1_5.php
+        case 'mail':      //page1_5.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_5").addClass('select');
             break;
-        case 'gateway_setting':     //page1_6.php
+        case 'telegram':     //page1_6.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_6").addClass('select');
             break;
-        case 'mapping-setting':     //page1_7.php
+        case 'admininfo':     //page1_7.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_7").addClass('select');
             break;
