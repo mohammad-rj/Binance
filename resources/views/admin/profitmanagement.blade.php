@@ -29,7 +29,7 @@
     background-color: #6c757dbd;
   }
 </style>
-<body id="pg_index" class="pg_index home">
+<body id="pg_index" class="pg_index profitmanagement">
   
   <div class="pg-header flexlyr">
       <!-- <a href="home.php" class="logo-icon"> -->
@@ -52,38 +52,33 @@
       
       <ol class="breadcrumb">
         <li><a href="{{route('admin.top')}}"><i class="fa fa-dashboard"></i> TOP</a></li>
+        <li class="active">利確ポイント設定</li>
       </ol>
     </section>
     <section class="content margin">
-              <div class="box-header row">
-                  <div class="col-md-10 box-title col-xs-8">
-                      <span class="box-title1">ライセンス管理</span>
-                  </div>
-                  <div class="box-tools col-md-2 col-xs-4">
-                      <a  href="{{asset('addLicense')}}" class="btn box-btn btn-primary">
-                          <i class="glyphicon glyphicon-plus"></i> ライセンス管理</a>
-                  </div>
-              </div>
-              <div class="box-body table-responsive">
-                  <table id="license" class="table table-bordered table-striped">
-                      <thead>
-                          <tr>
-                              <th class="text-center ">ID</th>
-                              <th class="text-center ">ユーザー</th>
-                              <th class="text-center ">メールアドレス</th>
-                              <th class="text-center ">数</th>
-                              <th class="text-center"> サイトのURL </th>
-                              <th class="text-center"> ライセンス</th>
-                              <th class="text-center ">行動</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                    
-                      </tbody>
-                  </table>
-
-              </div><!-- /.table-responsive -->
-
+        <div class="box-header row">
+            <div class="col-md-10 box-title col-xs-8">
+                <span class="box-title1">買い下がり設定</span>
+            </div>
+        </div>
+        <div class="box-body table-responsive">
+            <table id="license" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center ">ID</th>
+                        <th class="text-center ">ユーザー</th>
+                        <th class="text-center ">メールアドレス</th>
+                        <th class="text-center ">数</th>
+                        <th class="text-center"> サイトのURL </th>
+                        <th class="text-center"> ライセンス</th>
+                        <th class="text-center ">行動</th>
+                    </tr>
+                </thead>
+                <tbody>
+              
+                </tbody>
+            </table>
+        </div><!-- /.table-responsive -->
     </section>
   </aside><!-- /.right-side -->
   </div>
