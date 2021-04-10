@@ -6,7 +6,15 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Admin\TopController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\SignalController;
+use App\Http\Controllers\Admin\LogManageController;
 use App\Http\Controllers\Admin\ProfitManagement;
+use App\Http\Controllers\Admin\MailController;
+use App\Http\Controllers\Admin\TelegramController;
+use App\Http\Controllers\Admin\AdmininfoController;
+
+
 
 /*
  * Access Controllers
@@ -18,7 +26,6 @@ Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
     Route::group(['middleware' => 'auth'], function () {
         Route::get('logout', [LoginController::class, 'logout'])->name('logout');
     });
-
     // These routes require no user to be logged in
     Route::group(['middleware' => 'guest'], function () {
         // Authentication Routes
@@ -36,23 +43,19 @@ Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
         Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset.form');
         Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.reset');
     });
-    
 });
 
 Route::group(['namespace' => 'admin','prefix' => 'admin', 'as' => 'admin.'], function () {
     // These routes require the user to be logged in
     Route::group(['middleware' => 'auth'], function () {
-       
         // Authentication Routes
         Route::get('top', [TopController::class, 'index'])->name('top');
-        Route::get('userinfo', [TopController::class, 'index'])->name('userinfo');
-        Route::get('signal', [TopController::class, 'index'])->name('signal');
-        Route::get('logmanagement', [TopController::class, 'index'])->name('logmanagement');
+        Route::get('userinfo', [UserController::class, 'index'])->name('userinfo');
+        Route::get('signal', [SignalController::class, 'index'])->name('signal');
+        Route::get('logmanagement', [LogManageController::class, 'index'])->name('logmanagement');
         Route::get('profitmanagement', [ProfitManagement::class, 'index'])->name('profitmanagement');
-        Route::get('mail', [TopController::class, 'index'])->name('mail');
-        Route::get('telegram', [TopController::class, 'index'])->name('telegram');
-        Route::get('admininfo', [TopController::class, 'index'])->name('admininfo');
-       
+        Route::get('mail', [MailController::class, 'index'])->name('mail');
+        Route::get('telegram', [TelegramController::class, 'index'])->name('telegram');
+        Route::get('admininfo', [AdmininfoController::class, 'index'])->name('admininfo');
     });
-    
 });
