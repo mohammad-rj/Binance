@@ -53,7 +53,13 @@ Route::group(['namespace' => 'admin','prefix' => 'admin', 'as' => 'admin.'], fun
         Route::get('userinfo', [UserController::class, 'index'])->name('userinfo');
         Route::get('signal', [SignalController::class, 'index'])->name('signal');
         Route::get('logmanagement', [LogManageController::class, 'index'])->name('logmanagement');
-        Route::get('profitmanagement', [ProfitManagement::class, 'index'])->name('profitmanagement');
+        
+        Route::group(['namespace' => 'profitmanagement','prefix' => 'profitmanagement'], function () {
+            Route::get('/', [ProfitManagement::class, 'index'])->name('profitmanagement');
+            Route::post('buy', [ProfitManagement::class, 'buysetting'])->name('profitmanagement.buy');
+            Route::post('sell', [ProfitManagement::class, 'sellsetting'])->name('profitmanagement.sell');
+        });
+
         Route::get('mail', [MailController::class, 'index'])->name('mail');
         Route::get('telegram', [TelegramController::class, 'index'])->name('telegram');
         Route::get('admininfo', [AdmininfoController::class, 'index'])->name('admininfo');
