@@ -3,31 +3,23 @@
 @section('header')
 <style>
 		
-  .pagination {
-    display: inline-block;
+  .form-style {
+    display: flex;
+    justify-content: center;
   }
-  .pagination a, .pagination strong {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-style: none;
-    border-radius: 4px;
-    margin: 1px;
-    display: inline-block;
-    color: white;
-    font-weight: 600;
+  .form-group{
+    margin-left: 5vw;;
   }
-  .pagination a {
-    background-color: #5a6268;
+  .save{
+    float: right;
   }
-  .pagination a:hover {
-    background-color: #6c757d;
+  .box-body{
+    margin:3vw;
   }
-  .pagination strong {
-    background-color: #6c757dbd;
+  .d-flex{
+    display: flex;
   }
+ 
 </style>
 <body id="pg_index" class="pg_index profitmanagement">
   
@@ -43,8 +35,8 @@
       </div>
   </div>
   <div class="wrapper">
-    @endsection    
-    @section('content')
+  @endsection    
+  @section('content')
       <!-- Sidebar  -->
       <!-- Page Content  -->
       <aside class="right-side">
@@ -60,25 +52,82 @@
             <div class="col-md-10 box-title col-xs-8">
                 <span class="box-title1">買い下がり設定</span>
             </div>
+            
         </div>
-        <div class="box-body table-responsive">
-            <table id="license" class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th class="text-center ">ID</th>
-                        <th class="text-center ">ユーザー</th>
-                        <th class="text-center ">メールアドレス</th>
-                        <th class="text-center ">数</th>
-                        <th class="text-center"> サイトのURL </th>
-                        <th class="text-center"> ライセンス</th>
-                        <th class="text-center ">行動</th>
-                    </tr>
-                </thead>
-                <tbody>
-              
-                </tbody>
-            </table>
+        <div class="box-body row">
+          <form method="POST" action="{{ route('auth.login') }}">
+						@csrf
+              <div ><label for="">現保有BTCのエントリー</label></div>
+							<div class="form-style">
+                <div class="form-group">
+                  <label for="entrymax">上部</label>
+                  <div class="d-flex">
+                    <input id="entrymax" type="entrymax"  class="form-control" name="entrymax"  required  autofocus>
+                    <label for="">%</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entrymedium">中間</label>
+                  <div class="d-flex">
+                    <input id="entrymedium" type="entrymedium"  class="form-control" name="entrymedium" required autofocus>
+                    <label for="">%</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="entrymin">下部</label>
+                  <div class="d-flex">
+                    <input id="entrymin" type="entrymin"  class="form-control" name="entrymin" required autofocus>
+                    <label for="">%</label>
+                  </div>
+                </div>
+              </div>
+              <div class="save">
+                <button type="submit" class="btn btn-primary float-right">
+                  保存
+                </button>
+              </div>
+          </form>
         </div><!-- /.table-responsive -->
+        <div class="box-header row">
+          <div class="col-md-10 box-title col-xs-8">
+              <span class="box-title1">売り利確ポイント配分設定</span>
+          </div>
+          
+      </div>
+      <div class="box-body row">
+        <form method="POST" action="{{ route('auth.login') }}">
+          @csrf
+            <div ><label for="">現保有BTCのエントリー</label></div>
+            <div class="form-style">
+              <div class="form-group">
+                <label for="entrymax">第１利確ポイント</label>
+                <div class="d-flex">
+                  <input id="entrymax" type="entrymax"  class="form-control" name="entrymax"  required  autofocus>
+                  <label for="">%</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="entrymedium">第２利確ポイント</label>
+                <div class="d-flex">
+                  <input id="entrymedium" type="entrymedium"  class="form-control" name="entrymedium" required autofocus>
+                  <label for="">%</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="entrymin">第３利確ポイント</label>
+                <div class="d-flex">
+                  <input id="entrymin" type="entrymin"  class="form-control" name="entrymin" required autofocus>
+                  <label for="">%</label>
+                </div>
+              </div>
+            </div>
+            <div class="save">
+              <button type="submit" class="btn btn-primary float-right">
+                保存
+              </button>
+            </div>
+        </form>
+      </div><!-- /.table-responsive -->
     </section>
   </aside><!-- /.right-side -->
   </div>
