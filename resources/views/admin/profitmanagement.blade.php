@@ -18,6 +18,7 @@
   }
   .d-flex{
     display: flex;
+    justify-content:flex-end;
   }
  
 </style>
@@ -47,7 +48,7 @@
         <li class="active">利確ポイント設定</li>
       </ol>
     </section>
-    <section class="content margin">
+    <section class="content" style="margin-left:0px;margin-right:0px;">
         <div class="box-header row">
             <div class="col-md-10 box-title col-xs-8">
                 <span class="box-title1">買い下がり設定</span>
@@ -55,32 +56,55 @@
             
         </div>
         <div class="box-body row">
-          <form method="POST" action="{{ route('auth.login') }}">
+          
+          <form method="POST" action="{{ route('admin.profitmanagement.buy') }}">
 						@csrf
               <div ><label for="">現保有BTCのエントリー</label></div>
 							<div class="form-style">
+                <div class="form-group" style="margin-left:0px;">
+                  <label for="entrymax"></label>
+                    <div class="d-flex">
+                      <label for="">BTC</label>
+                  </div>
+                  <div class="d-flex">
+                      <label for="">アルトシーズン</label>
+                  </div>
+                </div>
                 <div class="form-group">
                   <label for="entrymax">上部</label>
                   <div class="d-flex">
-                    <input id="entrymax" type="entrymax"  class="form-control" name="entrymax"  required  autofocus>
+                    <input id="btcentrymax" type="btcentrymax"  class="form-control" name="btcentrymax"  required  autofocus>
+                    <label for="">%</label>
+                  </div>
+                  <div class="d-flex">
+                    <input id="altoentrymax" type="altoentrymax"  class="form-control" name="altoentrymax"  required  autofocus>
                     <label for="">%</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="entrymedium">中間</label>
                   <div class="d-flex">
-                    <input id="entrymedium" type="entrymedium"  class="form-control" name="entrymedium" required autofocus>
+                    <input id="btcentrymedium" type="btcentrymedium"  class="form-control" name="btcentrymedium" required autofocus>
+                    <label for="">%</label>
+                  </div>
+                  <div class="d-flex">
+                    <input id="altoentrymedium" type="altoentrymedium"  class="form-control" name="altoentrymedium" required autofocus>
                     <label for="">%</label>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="entrymin">下部</label>
                   <div class="d-flex">
-                    <input id="entrymin" type="entrymin"  class="form-control" name="entrymin" required autofocus>
+                    <input id="btcentrymin" type="btcentrymin"  class="form-control" name="btcentrymin" required autofocus>
+                    <label for="">%</label>
+                  </div>
+                  <div class="d-flex">
+                    <input id="altoentrymin" type="altoentrymin"  class="form-control" name="altoentrymin" required autofocus>
                     <label for="">%</label>
                   </div>
                 </div>
               </div>
+            
               <div class="save">
                 <button type="submit" class="btn btn-primary float-right">
                   保存
@@ -95,28 +119,48 @@
           
       </div>
       <div class="box-body row">
-        <form method="POST" action="{{ route('auth.login') }}">
+        <form method="POST" action="{{ route('admin.profitmanagement.sell') }}">
           @csrf
-            <div ><label for="">現保有BTCのエントリー</label></div>
             <div class="form-style">
+              <div class="form-group" style="margin-left:0px;">
+                  <label for="entrymax"></label>
+                    <div class="d-flex">
+                      <label for="">BTC</label>
+                  </div>
+                  <div class="d-flex">
+                      <label for="">アルトシーズン</label>
+                  </div>
+                </div>
               <div class="form-group">
                 <label for="entrymax">第１利確ポイント</label>
                 <div class="d-flex">
-                  <input id="entrymax" type="entrymax"  class="form-control" name="entrymax"  required  autofocus>
+                  <input id="btcentrymax" type="btcentrymax"  class="form-control" name="btcentrymax"  required  autofocus>
+                  <label for="">%</label>
+                </div>
+                <div class="d-flex">
+                  <input id="altoentrymax" type="entrymax"  class="form-control" name="entrymax"  required  autofocus>
                   <label for="">%</label>
                 </div>
               </div>
               <div class="form-group">
                 <label for="entrymedium">第２利確ポイント</label>
                 <div class="d-flex">
-                  <input id="entrymedium" type="entrymedium"  class="form-control" name="entrymedium" required autofocus>
+                  <input id="btcentrymedium" type="btcentrymedium"  class="form-control" name="btcentrymedium" required autofocus>
+                  <label for="">%</label>
+                </div>
+                <div class="d-flex">
+                  <input id="altoentrymedium" type="altoentrymedium"  class="form-control" name="altoentrymedium" required autofocus>
                   <label for="">%</label>
                 </div>
               </div>
               <div class="form-group">
                 <label for="entrymin">第３利確ポイント</label>
                 <div class="d-flex">
-                  <input id="entrymin" type="entrymin"  class="form-control" name="entrymin" required autofocus>
+                  <input id="btcentrymin" type="btcentrymin"  class="form-control" name="btcentrymin" required autofocus>
+                  <label for="">%</label>
+                </div>
+                <div class="d-flex">
+                  <input id="altoentrymin" type="altoentrymin"  class="form-control" name="altoentrymin" required autofocus>
                   <label for="">%</label>
                 </div>
               </div>

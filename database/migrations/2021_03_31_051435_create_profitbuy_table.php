@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfitsettingsTable extends Migration
+class CreateProfitBuyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateProfitsettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('profitsettings', function (Blueprint $table) {
+        Schema::create('profitbuy', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mode')->nullable();
             $table->integer('entrymin')->unsigned()->nullable();
             $table->integer('entrymedium')->unsigned()->nullable();
             $table->integer('entrymax')->unsigned()->nullable();
-            $table->integer('firstprofit')->unsigned()->nullable();
-            $table->integer('secondprofit')->unsigned()->nullable();
-            $table->integer('thirdprofit')->unsigned()->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ class CreateProfitsettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profitsettings');
+        Schema::dropIfExists('profitbuy');
     }
 }
