@@ -5,6 +5,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\VerificationController;
+
+//admin route
 use App\Http\Controllers\Admin\TopController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SignalController;
@@ -13,6 +15,13 @@ use App\Http\Controllers\Admin\ProfitManagement;
 use App\Http\Controllers\Admin\MailController;
 use App\Http\Controllers\Admin\TelegramController;
 use App\Http\Controllers\Admin\AdmininfoController;
+
+//user route
+
+use App\Http\Controllers\User\ProfitSetting;
+use App\Http\Controllers\User\UserInfoController;
+use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\SettingController;
 
 
 
@@ -63,5 +72,16 @@ Route::group(['namespace' => 'admin','prefix' => 'admin', 'as' => 'admin.'], fun
         Route::get('mail', [MailController::class, 'index'])->name('mail');
         Route::get('telegram', [TelegramController::class, 'index'])->name('telegram');
         Route::get('admininfo', [AdmininfoController::class, 'index'])->name('admininfo');
+    });
+});
+
+Route::group(['namespace' => 'user','prefix' => 'user', 'as' => 'user.'], function () {
+    // These routes require the user to be logged in
+    Route::group(['middleware' => 'auth'], function () {
+        // Authentication Routes
+        Route::get('top', [HomeController::class, 'index'])->name('top');
+        Route::get('userinfo', [UserInfoController::class, 'index'])->name('userinfo');
+        Route::get('setting', [SettingController::class, 'index'])->name('setting');
+        Route::get('profitsetting', [ProfitSetting::class, 'index'])->name('profitsetting');
     });
 });
