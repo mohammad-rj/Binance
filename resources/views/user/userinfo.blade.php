@@ -1,7 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.userapp')
 
 @section('header')
-<body id="pg_index" class="pg_index home">
+
+<body id="pg_index" class="pg_index userinfo">
   
   <div class="pg-header flexlyr">
       <!-- <a href="home.php" class="logo-icon"> -->
@@ -15,8 +16,8 @@
       </div>
   </div>
   <div class="wrapper">
-    @endsection    
-    @section('content')
+  @endsection   
+  @section('content')
       <!-- Sidebar  -->
       <!-- Page Content  -->
       <aside class="right-side">
@@ -24,19 +25,11 @@
       
       <ol class="breadcrumb">
         <li><a href="{{route('admin.top')}}"><i class="fa fa-dashboard"></i> TOP</a></li>
+        <li class="active">請求者情報</li>
       </ol>
     </section>
     <section class="content margin">
-        <div class="header">
-        <select class="custom-select">
-          <option selected><?php echo date("Y");?></option>
-          <option value="1"><?php echo date("Y");?></option>
-          <option value="2"><?php echo date("Y");?></option>
-        </select>
-        <select class="custom-select">
-          <option selected><?php echo date("m");?>月</option>
-        </select>
-        </div>
+        
     </section>
   </aside><!-- /.right-side -->
   </div>
