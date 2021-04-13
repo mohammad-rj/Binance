@@ -15,7 +15,8 @@
         "laravel/ui": "^3.2",
         "laravelcollective/html": "^6.1",
         "telegram-bot-sdk/laravel": "^4.0@dev",
-        "telegram-bot-sdk/telegram-bot-sdk": "^4.0@dev"
+        "telegram-bot-sdk/telegram-bot-sdk": "^4.0@dev",
+        "laravelcollective/html": "^6.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
