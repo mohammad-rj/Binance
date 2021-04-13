@@ -3,33 +3,11 @@
 @section('header')
 <style>
 		
-  .pagination {
-    display: inline-block;
-  }
-  .pagination a, .pagination strong {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-style: none;
-    border-radius: 4px;
-    margin: 1px;
-    display: inline-block;
-    color: white;
-    font-weight: 600;
-  }
-  .pagination a {
-    background-color: #5a6268;
-  }
-  .pagination a:hover {
-    background-color: #6c757d;
-  }
-  .pagination strong {
-    background-color: #6c757dbd;
+  .box-header{
+    margin-bottom:30px;
   }
 </style>
-<body id="pg_index" class="pg_index home">
+<body id="pg_index" class="pg_index setting">
   
   <div class="pg-header flexlyr">
       <!-- <a href="home.php" class="logo-icon"> -->
@@ -52,38 +30,49 @@
       
       <ol class="breadcrumb">
         <li><a href="{{route('admin.top')}}"><i class="fa fa-dashboard"></i> TOP</a></li>
+        <li class="active">設定</li>
       </ol>
     </section>
     <section class="content margin">
-              <div class="box-header row">
-                  <div class="col-md-10 box-title col-xs-8">
-                      <span class="box-title1">ライセンス管理</span>
-                  </div>
-                  <div class="box-tools col-md-2 col-xs-4">
-                      <a  href="{{asset('addLicense')}}" class="btn box-btn btn-primary">
-                          <i class="glyphicon glyphicon-plus"></i> ライセンス管理</a>
-                  </div>
-              </div>
-              <div class="box-body table-responsive">
-                  <table id="license" class="table table-bordered table-striped">
-                      <thead>
-                          <tr>
-                              <th class="text-center ">ID</th>
-                              <th class="text-center ">ユーザー</th>
-                              <th class="text-center ">メールアドレス</th>
-                              <th class="text-center ">数</th>
-                              <th class="text-center"> サイトのURL </th>
-                              <th class="text-center"> ライセンス</th>
-                              <th class="text-center ">行動</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                    
-                      </tbody>
-                  </table>
-
-              </div><!-- /.table-responsive -->
-
+        <div class="box-header row">
+            <div class="col-md-10 box-title col-xs-8">
+                <span class="box-title1">カード情報登録</span>
+            </div>
+        </div>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">カード番号</label>
+          <div class="col-sm-5">
+            <input type="email" class="form-control" id="inputEmail3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">月/年</label>
+          <div class="col-sm-2">
+            <input type="email" class="form-control" id="inputPassword3" required>
+          </div>
+          <div class="col-sm-2">
+            <input type="email" class="form-control" id="inputPassword3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">名前</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputPassword3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">セキュリティコード</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputPassword3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-5">
+            <button type="submit" class="btn btn-primary">保存</button>
+          </div>
+        </div>
+      </form>
     </section>
   </aside><!-- /.right-side -->
   </div>

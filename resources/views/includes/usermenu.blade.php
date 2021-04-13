@@ -22,10 +22,10 @@
                     <a href="{{route('user.userinfo')}}">請求者情報</a>
                 </li>
                 <li class="menu1_2">
-                    <a href="{{route('user.profitsetting')}}">シグナル管理</a>
+                    <a href="{{route('user.setting')}}">設定</a>
                 </li>
                 <li class="menu1_3">
-                    <a href="{{route('user.setting')}}">ログ管理</a>
+                    <a href="{{route('user.profitsetting')}}">利確ポイント設定</a>
                 </li>
             </ul>
         </li>

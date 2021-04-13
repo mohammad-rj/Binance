@@ -22,7 +22,7 @@
   }
  
 </style>
-<body id="pg_index" class="pg_index profitmanagement">
+<body id="pg_index" class="pg_index profitsetting">
   
   <div class="pg-header flexlyr">
       <!-- <a href="home.php" class="logo-icon"> -->

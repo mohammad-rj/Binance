@@ -2,31 +2,29 @@
 
 @section('header')
 <style>
-		
-  .pagination {
-    display: inline-block;
+  .header{
+    display:flex;
+    justify-content:space-around;
+    font-size:22px;
   }
-  .pagination a, .pagination strong {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    text-decoration: none;
-    border-style: none;
-    border-radius: 4px;
-    margin: 1px;
-    display: inline-block;
+  .title{
+    display:flex;
+    font-size:22px;
+    margin:25px;
+    /* justify-content:start-end; */
+  }
+  .unit{
+    margin-right:3vw;
+  }
+  .thead-dark{
     color: white;
-    font-weight: 600;
+    background-color: #3f3f3f;
   }
-  .pagination a {
-    background-color: #5a6268;
+  .table{
+    text-align:center;
   }
-  .pagination a:hover {
-    background-color: #6c757d;
-  }
-  .pagination strong {
-    background-color: #6c757dbd;
+  tr th{
+    text-align:center;
   }
 </style>
 <body id="pg_index" class="pg_index home">
@@ -55,35 +53,44 @@
       </ol>
     </section>
     <section class="content margin">
-              <div class="box-header row">
-                  <div class="col-md-10 box-title col-xs-8">
-                      <span class="box-title1">ライセンス管理</span>
-                  </div>
-                  <div class="box-tools col-md-2 col-xs-4">
-                      <a  href="{{asset('addLicense')}}" class="btn box-btn btn-primary">
-                          <i class="glyphicon glyphicon-plus"></i> ライセンス管理</a>
-                  </div>
-              </div>
-              <div class="box-body table-responsive">
-                  <table id="license" class="table table-bordered table-striped">
-                      <thead>
-                          <tr>
-                              <th class="text-center ">ID</th>
-                              <th class="text-center ">ユーザー</th>
-                              <th class="text-center ">メールアドレス</th>
-                              <th class="text-center ">数</th>
-                              <th class="text-center"> サイトのURL </th>
-                              <th class="text-center"> ライセンス</th>
-                              <th class="text-center ">行動</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                    
-                      </tbody>
-                  </table>
-
-              </div><!-- /.table-responsive -->
-
+      <div class="header">
+          <div class="unit">
+            <select class="custom-select">
+              <option selected><?php echo date("Y");?>年</option>
+            </select>
+          </div>
+         <div class="unit">
+            <select class="custom-select">
+              <option selected><?php echo date("m");?>月</option>
+            </select>
+         </div>
+          <div class="unit">
+            <label class="form-label">ご請求額</label>&nbsp;&nbsp;
+            <input type="text" value="120,000" style="text-align:center;width:100px;font-size:25px" disabled/>
+            <label class="form-label">円</label>
+          </div>
+        </div>
+        <div class="title">
+          <div class="unit">山田太郎様</div>
+        </div>
+        <div class="box-body table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>金額</th>
+                <th>請求</th>
+                <th>メニュー</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>40,000円</td>
+                <td>失敗</td>
+                <td>設定　請求書　領収書</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </section>
   </aside><!-- /.right-side -->
   </div>

@@ -28,15 +28,18 @@
                     <a href="{{route('admin.logmanagement')}}">ログ管理</a>
                 </li>
                 <li class="menu1_4">
-                    <a href="{{route('admin.profitmanagement')}}">利確ポイント設定</a>
+                    <a href="{{route('admin.buyout')}}">買い下がりログ管理</a>
                 </li>
                 <li class="menu1_5">
-                    <a href="{{route('admin.mail')}}">メール送信設定</a>
+                    <a href="{{route('admin.profitmanagement')}}">利確ポイント設定</a>
                 </li>
                 <li class="menu1_6">
-                    <a href="{{route('admin.telegram')}}">Telegram連動設定</a>
+                    <a href="{{route('admin.mail')}}">メール送信設定</a>
                 </li>
                 <li class="menu1_7">
+                    <a href="{{route('admin.telegram')}}">Telegram連動設定</a>
+                </li>
+                <li class="menu1_8">
                     <a href="{{route('admin.admininfo')}}">管理者情報</a>
                 </li>
             </ul>
