@@ -13,7 +13,7 @@
 </style>
 @section('header')
 
-<body id="pg_index" class="pg_index logmanagement">
+<body id="pg_index" class="pg_index buyout">
   
   <div class="pg-header flexlyr">
       <!-- <a href="home.php" class="logo-icon"> -->
@@ -36,66 +36,62 @@
       
       <ol class="breadcrumb">
         <li><a href="{{route('admin.top')}}"><i class="fa fa-dashboard"></i> TOP</a></li>
-        <li class="active">ログ管理</li>
+        <li class="active">買い下がりログ管理</li>
       </ol>
     </section>
     <section class="content margin">
-      <div class="box-body table-responsive">
+    <div class="box-body table-responsive">
           <table class="table table-bordered table-striped">
             <thead class="thead-dark">
               <tr>
                 <th>処理日</th>
-                <th>ID</th>
                 <th>銘柄</th>
                 <th>建て</th>
-                <th>エントリーmin</th>
-                <th>エントリーmax</th>
-                <th>第1</th>
-                <th>第1</th>
-                <th>第1</th>
-                <th>損切り</th>
+                <th>3段階<br>第1</th>
+                <th>3段階<br>第2</th>
+                <th>3段階<br>第3</th>
+                <th>4段階<br>第1</th>
+                <th>4段階<br>第2</th>
+                <th>4段階<br>第3</th>
                 <th>モード</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>20/2/2　18:30</td>
-                <td>1</td>
-                <td>WABI</td>
-                <td>BTC</td>
-                <td>0.00000350</td>
-                <td>0.00000500</td>
-                <td>0.00000525</td>
-                <td>0.00000550</td>
-                <td>0.00000594</td>
-                <th>0.00000335</th>
-                <td>ー</td>
+                <th>20/2/2　18:30</th>
+                <th>WABI</th>
+                <th>BTC</th>
+                <th>0.0000052</th>
+                <th>0.00000550</th>
+                <th>0.00000594</th>
+                <th>0.00000525</th>
+                <th>0.0000055</th>
+                <th>0.00000594</th>
+                <th>ー</th>
               </tr>
               <tr>
-                <td>20/2/1　17:30</td>
-                <td>2</td>
-                <td>WABI</td>
-                <td>BTC</td>
-                <td>0.00000350</td>
-                <td>0.00000500</td>
-                <td>0.00000525</td>
-                <td>0.00000550</td>
-                <td>0.00000594</td>
-                <th>0.00000335</th>
-                <td>BTC</td>
+                <th>20/2/1　17:30</th>
+                <th>WABI</th>
+                <th>BTC</th>
+                <th>0.0000052</th>
+                <th>0.00000550</th>
+                <th>0.00000594</th>
+                <th>0.00000525</th>
+                <th>0.0000055</th>
+                <th>0.00000594</th>
+                <th>BTC</th>
               </tr>
               <tr>
-                <td>20/2/1　12:30</td>
-                <td>3</td>
-                <td>WABI</td>
-                <td>BTC</td>
-                <td>0.00000350</td>
-                <td>0.00000500</td>
-                <td>0.00000525</td>
-                <td>0.00000550</td>
-                <td>0.00000594</td>
-                <th>0.00000335</th>
-                <td>アルト</td>
+                <th>20/2/1　17:30</th>
+                <th>WABI</th>
+                <th>BTC</th>
+                <th>0.0000052</th>
+                <th>0.00000550</th>
+                <th>0.00000594</th>
+                <th>0.00000525</th>
+                <th>0.0000055</th>
+                <th>0.00000594</th>
+                <th>アルト</th>
               </tr>
             </tbody>
           </table>

@@ -1,5 +1,19 @@
 @extends('layouts.userapp')
-
+<style>
+   .thead-dark{
+    color: white;
+    background-color: #3f3f3f;
+  }
+  .table{
+    text-align:center;
+  }
+  tr th{
+    text-align:center;
+  }
+  .content{
+    font-size:22px;
+  }
+  </style>
 @section('header')
 
 <body id="pg_index" class="pg_index userinfo">
@@ -29,7 +43,75 @@
       </ol>
     </section>
     <section class="content margin">
-        
+    <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">お客様名：</label>
+          <div class="col-sm-5">
+            <input type="email" class="form-control" id="inputEmail3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">ユーザー名：</label>
+          <div class="col-sm-5">
+            <input type="email" class="form-control" id="inputPassword3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">パスワード：</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="inputPassword3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-5">
+            <button type="submit" class="btn btn-primary">保存</button>
+          </div>
+        </div>
+      </form>
+      <div class="box-body table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>請求月</th>
+              <th>保有BTC</th>
+              <th>JPY換算</th>
+              <th>請求額</th>
+              <th>請求</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">2021年１月</th>
+              <td>0.2</td>
+              <td>1,000,000円</td>
+              <td>40,000円</td>
+              <td>失敗</td>
+            </tr>
+            <tr>
+              <th scope="row">2020年１2月</th>
+              <td>0.1</td>
+              <td>1,000,000円</td>
+              <td>40,000円</td>
+              <td>成功</td>
+            </tr>
+            <tr>
+              <th scope="row">2020年１0月</th>
+              <td>0.099</td>
+              <td>1,000,000円</td>
+              <td>40,000円</td>
+              <td>成功</td>
+            </tr>
+            <tr>
+              <th scope="row">2020年9月</th>
+              <td>0.099</td>
+              <td>1,000,000円</td>
+              <td>40,000円</td>
+              <td>成功</td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </section>
   </aside><!-- /.right-side -->
   </div>

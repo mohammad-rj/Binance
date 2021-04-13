@@ -176,6 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         // Application Service Providers...
         Collective\Html\HtmlServiceProvider::class,
+        adman9000\binance\BinanceServiceProvider::class,
     ],
 
     /*
@@ -231,6 +232,7 @@ return [
         // Third Party Aliases
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Kraken' => adman9000\binance\BinanceAPIFacade::class,
     ],
 
 ];

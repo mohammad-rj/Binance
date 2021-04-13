@@ -20,56 +20,34 @@ $( window ).on( "load", function() {
             $('#pageSubmenu').collapse("show");
             $(".menu1_3").addClass('select');
             break;
-
-        case 'profitmanagement':       //page1_4.php
+        case 'buyout':    //page1_3.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_4").addClass('select');
             break;
-        case 'mail':      //page1_5.php
+
+        case 'profitmanagement':       //page1_4.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_5").addClass('select');
             break;
-        case 'telegram':     //page1_6.php
+        case 'mail':      //page1_5.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_6").addClass('select');
             break;
-        case 'admininfo':     //page1_7.php
+        case 'telegram':     //page1_6.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_7").addClass('select');
             break;
-        case 'list-setting':        //page1_8.php
+        case 'admininfo':     //page1_7.php
             $('#pageSubmenu').collapse("show");
             $(".menu1_8").addClass('select');
             break;
-
-
-            
-        case 'sensor-monitor':      //page2.php
-            $(".menu2").addClass('select');
+        case 'profitsetting':     //page1_7.php
+            $('#pageSubmenu').collapse("show");
+            $(".menu1_3").addClass('select');
             break;
-        case "mapping":             //page3.php
-            $(".menu3").addClass('select');
-            break;
-        case 'alarm-history':       //page4.php
-            $(".menu4").addClass('select');
-            break;
-        case 'alarm-message':       //page5.php
-            $(".menu5").addClass('select');
-            break;
-
-
-
-        case 'report':        //page6_1.php
-            $('#pageSubmenu1').collapse("show");
-            $(".menu6_1").addClass('select');
-            break;
-        case 'graph':        //page6_2.php
-            $('#pageSubmenu1').collapse("show");
-            $(".menu6_2").addClass('select');
-            break;
-        case 'graph-compare':        //page6_3.php
-            $('#pageSubmenu1').collapse("show");
-            $(".menu6_3").addClass('select');
+        case 'setting':     //page1_7.php
+            $('#pageSubmenu').collapse("show");
+            $(".menu1_2").addClass('select');
             break;
     }
 });

@@ -14,6 +14,9 @@ body.my-login-page {
 	text-align: center;
 	/* box-shadow: 0 0 40px rgba(0,0,0,.05); */
 }
+.card.fat{
+	border:1px solid #d9d9d9 !important;
+}
 
 .my-login-page .brand img {
 	width: 100%;

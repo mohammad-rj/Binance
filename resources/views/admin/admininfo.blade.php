@@ -29,7 +29,25 @@
       </ol>
     </section>
     <section class="content margin">
-        
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">ユーザー名</label>
+          <div class="col-sm-5">
+            <input type="email" class="form-control" id="inputEmail3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">パスワード</label>
+          <div class="col-sm-5">
+            <input type="email" class="form-control" id="inputEmail3" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-5">
+            <button type="submit" class="btn btn-primary">保存</button>
+          </div>
+        </div>
+      </form>
     </section>
   </aside><!-- /.right-side -->
   </div>

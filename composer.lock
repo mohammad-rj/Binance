@@ -4,8 +4,61 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56cb86d0f663489414c3a8b48a3cfdf3",
+    "content-hash": "5c64aae1623ecd721cd3e82edca18433",
     "packages": [
+        {
+            "name": "adman9000/laravel-binance",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adman9000/laravel-binance.git",
+                "reference": "d0e1acf8fb2af42597156e0baaeeac0f029bf912"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adman9000/laravel-binance/zipball/d0e1acf8fb2af42597156e0baaeeac0f029bf912",
+                "reference": "d0e1acf8fb2af42597156e0baaeeac0f029bf912",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "laravel/framework": ">=5.3",
+                "php": ">=5.6.4"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "adman9000\\binance\\BinanceServiceProvider"
+                    ],
+                    "aliases": {
+                        "Binance": "adman9000\\binance\\BinanceAPIFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "adman9000\\binance\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Harding",
+                    "email": "myaddressistaken@googlemail.com"
+                }
+            ],
+            "description": "Implementation of Binance trading API for Laravel",
+            "support": {
+                "issues": "https://github.com/adman9000/laravel-binance/issues",
+                "source": "https://github.com/adman9000/laravel-binance/tree/master"
+            },
+            "time": "2018-08-19T18:16:19+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.3",
@@ -4731,6 +4784,289 @@
             "time": "2021-03-28T09:42:18+00:00"
         },
         {
+            "name": "telegram-bot-sdk/addon-manager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/telegram-bot-sdk/addon-manager.git",
+                "reference": "e42dbeff4d57c3018a14b4ea2b0046b5a629b958"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/telegram-bot-sdk/addon-manager/zipball/e42dbeff4d57c3018a14b4ea2b0046b5a629b958",
+                "reference": "e42dbeff4d57c3018a14b4ea2b0046b5a629b958",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+                "php": "^7.4",
+                "thecodingmachine/discovery": "^1.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpunit/phpunit": "^8.5 || ^9.0",
+                "telegram-bot-sdk/telegram-bot-sdk": "^4.0@dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Telegram\\Bot\\Addon\\Laravel\\AddonServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Telegram\\Bot\\Addon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Irfaq Syed",
+                    "homepage": "https://github.com/irazasyed"
+                }
+            ],
+            "description": "Addon Manager for Telegram Bot SDK",
+            "homepage": "https://github.com/telegram-bot-sdk/addon-manager",
+            "keywords": [
+                "addon",
+                "chatbot",
+                "telegram",
+                "telegram addon",
+                "telegram bot addon",
+                "telegram bot sdk",
+                "telegram chatbot",
+                "telegram-bot-sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/telegram-bot-sdk/addon-manager/issues",
+                "source": "https://github.com/telegram-bot-sdk/addon-manager/tree/master"
+            },
+            "time": "2020-09-13T22:17:10+00:00"
+        },
+        {
+            "name": "telegram-bot-sdk/laravel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/telegram-bot-sdk/laravel.git",
+                "reference": "4264fedeafacef918d984d3a6b04daf9821c78f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/telegram-bot-sdk/laravel/zipball/4264fedeafacef918d984d3a6b04daf9821c78f2",
+                "reference": "4264fedeafacef918d984d3a6b04daf9821c78f2",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "6 - 8",
+                "telegram-bot-sdk/telegram-bot-sdk": "^4.0@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5 || ^9.0"
+            },
+            "suggest": {
+                "irazasyed/larasupport": "Allows you to use any Laravel Package in Lumem"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Telegram\\Bot\\Laravel\\TelegramServiceProvider"
+                    ],
+                    "aliases": {
+                        "Telegram": "Telegram\\Bot\\Laravel\\Facades\\Telegram"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Telegram\\Bot\\Laravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Irfaq Syed",
+                    "homepage": "https://github.com/irazasyed"
+                }
+            ],
+            "description": "Laravel Package for Telegram Bot SDK",
+            "homepage": "https://github.com/telegram-bot-sdk/laravel",
+            "keywords": [
+                "PHP telegram bot",
+                "laravel telegram",
+                "laravel telegram bot",
+                "laravel telegram bot sdk",
+                "lumen telegram bot",
+                "telegram bot sdk laravel",
+                "telegram-bot-sdk"
+            ],
+            "support": {
+                "chat": "https://t.me/PHPChatCo",
+                "docs": "https://telegrambotsdk.com",
+                "forum": "https://phpchat.co",
+                "issues": "https://github.com/telegram-bot-sdk/laravel/issues",
+                "source": "https://github.com/telegram-bot-sdk/laravel"
+            },
+            "time": "2020-09-16T19:21:40+00:00"
+        },
+        {
+            "name": "telegram-bot-sdk/telegram-bot-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/telegram-bot-sdk/telegram-bot-sdk.git",
+                "reference": "bf3a99b3c08467621f4d4bb227c1159dd9741759"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/telegram-bot-sdk/telegram-bot-sdk/zipball/bf3a99b3c08467621f4d4bb227c1159dd9741759",
+                "reference": "bf3a99b3c08467621f4d4bb227c1159dd9741759",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.3 || ^7.0.1",
+                "guzzlehttp/psr7": "^1.3",
+                "illuminate/container": "6 - 8",
+                "illuminate/events": "6 - 8",
+                "illuminate/support": "6 - 8",
+                "php": ">=7.4",
+                "telegram-bot-sdk/addon-manager": "^1.0@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5 || ^9.0"
+            },
+            "suggest": {
+                "telegram-bot-sdk/laravel": "Laravel Support for Telegram Bot SDK."
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Telegram\\Bot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Syed Irfaq R.",
+                    "email": "syed+gh@lukonet.com",
+                    "homepage": "https://github.com/irazasyed"
+                },
+                {
+                    "name": "Telegram Bot SDK Community",
+                    "homepage": "https://github.com/telegram-bot-sdk/telegram-bot-sdk/graphs/contributors"
+                }
+            ],
+            "description": "The Telegram Bot API PHP SDK",
+            "homepage": "https://github.com/telegram-bot-sdk/telegram-bot-sdk",
+            "keywords": [
+                "PHP telegram bot",
+                "chatbot",
+                "telegram",
+                "telegram bot",
+                "telegram bot api",
+                "telegram bot api php sdk",
+                "telegram bot php sdk",
+                "telegram bot sdk",
+                "telegram chatbot",
+                "telegram php",
+                "telegram-bot-sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/telegram-bot-sdk/telegram-bot-sdk/issues",
+                "source": "https://github.com/telegram-bot-sdk/telegram-bot-sdk/tree/master"
+            },
+            "time": "2020-11-05T13:18:31+00:00"
+        },
+        {
+            "name": "thecodingmachine/discovery",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thecodingmachine/discovery.git",
+                "reference": "c5d15800bdd7ddf8390d00eeb9e570142eb69f10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thecodingmachine/discovery/zipball/c5d15800bdd7ddf8390d00eeb9e570142eb69f10",
+                "reference": "c5d15800bdd7ddf8390d00eeb9e570142eb69f10",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "composer/composer": "^1 || ^2",
+                "composer/semver": "^1 || ^2 || ^3",
+                "couscous/couscous": "^1.8",
+                "infection/infection": "^0.17.7 || ^1.18.2",
+                "php-coveralls/php-coveralls": "^2.4.2",
+                "phpunit/phpunit": "^8.5.8",
+                "squizlabs/php_codesniffer": "^2.9.2"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "TheCodingMachine\\Discovery\\DiscoveryPlugin",
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TheCodingMachine\\Discovery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Négrier",
+                    "email": "d.negrier@thecodingmachine.com",
+                    "homepage": "http://mouf-php.com"
+                }
+            ],
+            "description": "Publish and discover assets in your PHP projects.",
+            "homepage": "https://github.com/thecodingmachine/discovery",
+            "keywords": [
+                "assets",
+                "discovery"
+            ],
+            "support": {
+                "issues": "https://github.com/thecodingmachine/discovery/issues",
+                "source": "https://github.com/thecodingmachine/discovery/tree/v1.3.0"
+            },
+            "time": "2020-10-27T17:03:21+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.3",
             "source": {
@@ -7500,7 +7836,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "adman9000/laravel-binance": 20,
+        "telegram-bot-sdk/laravel": 20,
+        "telegram-bot-sdk/telegram-bot-sdk": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

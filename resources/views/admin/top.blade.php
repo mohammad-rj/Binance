@@ -1,5 +1,30 @@
 @extends('layouts.app')
-
+<style>
+  .header{
+    display:flex;
+    justify-content:space-around;
+    font-size:22px;
+  }
+  .title{
+    display:flex;
+    font-size:22px;
+    margin:25px;
+    /* justify-content:start-end; */
+  }
+  .unit{
+    margin-right:3vw;
+  }
+  .thead-dark{
+    color: white;
+    background-color: #3f3f3f;
+  }
+  .table{
+    text-align:center;
+  }
+  tr th{
+    text-align:center;
+  }
+</style>
 @section('header')
 <body id="pg_index" class="pg_index home">
   
@@ -28,14 +53,69 @@
     </section>
     <section class="content margin">
         <div class="header">
-        <select class="custom-select">
-          <option selected><?php echo date("Y");?></option>
-          <option value="1"><?php echo date("Y");?></option>
-          <option value="2"><?php echo date("Y");?></option>
-        </select>
-        <select class="custom-select">
-          <option selected><?php echo date("m");?>月</option>
-        </select>
+          <div class="unit">
+            <select class="custom-select">
+              <option selected><?php echo date("Y");?>年</option>
+            </select>
+          </div>
+         <div class="unit">
+            <select class="custom-select">
+              <option selected><?php echo date("m");?>月</option>
+            </select>
+         </div>
+          <div class="unit">
+            <label class="form-label">売上</label>&nbsp;&nbsp;
+            <input type="text" value="120,000" style="text-align:center;width:100px;font-size:25px" disabled/>
+            <label class="form-label">円</label>
+          </div>
+          <div class="unit">
+            <label class="form-label">モード :</label>
+            <select class="custom-select">
+              <option selected>BTCモード</option>
+              <option >ALTOモード</option>
+            </select>
+          </div>
+        </div>
+        <div class="title">
+          <div class="unit">ユーザー数：6人</div>
+          <div class="unit">請求成功：5人</div>
+          <div class="unit">請求失敗：1人</div>
+        </div>
+        <div class="box-body table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>ID</th>
+                <th>顧客名</th>
+                <th>金額</th>
+                <th>請求</th>
+                <th>メニュー</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>山田太郎</td>
+                <td>40,000円</td>
+                <td>失敗</td>
+                <td>設定　ログイン　請求書　領収書</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>山田太郎</td>
+                <td>40,000円</td>
+                <td>失敗</td>
+                <td>設定　ログイン　請求書　領収書</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>山田太郎</td>
+                <td>40,000円</td>
+                <td>失敗</td>
+                <td>設定　ログイン　請求書　領収書</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
     </section>
   </aside><!-- /.right-side -->
