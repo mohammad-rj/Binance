@@ -12,7 +12,8 @@ class BuyOutController extends Controller
     public function index()
     {
         $binance=new BinanceAPI();
-        print_r($binance->getOpenOrders());
+        print_r($binance->getMarkets());
+        // print_r($binance->getOpenOrders());
         // return view('admin.buyoutlog');
     }
 }

@@ -20,16 +20,28 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">パスワードを忘れました</h4>
-							 
+							@if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    <form method="POST" action="{{ route('password.email') }}">
+                        @csrf
 								<div class="form-group">
-									<input id="email" type="email" class="form-control" name="email" value="" placeholder="メールアドレス">
+									<input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="メールアドレス">
+									@error('email')
+											<span class="invalid-feedback" role="alert">
+													<strong>{{ $message }}</strong>
+											</span>
+									@enderror
 									<div class="form-text text-muted">
 										メールアドレスを入力し、「パスワードを変更す る」ボタンをクリックして下さい
 									</div>
 								</div>
 
 								<div class="form-group no-margin">
-									<button class="btn btn-primary btn-block" onclick="register();">
+									<button type="submit" class="btn btn-primary">
 										パスワードを変更する
 									</button>
 								</div>
