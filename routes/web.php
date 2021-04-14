@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Admin\TopController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\SignalController;
+use App\Http\Controllers\Admin\BuyOutController;
 use App\Http\Controllers\Admin\LogManageController;
 use App\Http\Controllers\Admin\ProfitManagement;
 use App\Http\Controllers\Admin\MailController;
@@ -30,6 +31,9 @@ use App\Http\Controllers\User\SettingController;
  * All route names are prefixed with 'auth'.
  */
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
+Route::group(["get","post"],function(){
+    Route::get('receiveSignal', [SignalController::class, 'receiveSignal'])->name('receiveSignal');
+});
 Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
     // These routes require the user to be logged in
     Route::group(['middleware' => 'auth'], function () {
@@ -62,6 +66,7 @@ Route::group(['namespace' => 'admin','prefix' => 'admin', 'as' => 'admin.'], fun
         Route::get('userinfo', [UserController::class, 'index'])->name('userinfo');
         Route::get('signal', [SignalController::class, 'index'])->name('signal');
         Route::get('logmanagement', [LogManageController::class, 'index'])->name('logmanagement');
+        Route::get('buyout', [BuyOutController::class, 'index'])->name('buyout');
         
         Route::group(['namespace' => 'profitmanagement','prefix' => 'profitmanagement'], function () {
             Route::get('/', [ProfitManagement::class, 'index'])->name('profitmanagement');
