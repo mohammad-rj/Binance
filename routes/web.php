@@ -56,7 +56,7 @@ Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
 
 Route::group(['namespace' => 'admin','prefix' => 'admin', 'as' => 'admin.'], function () {
     // These routes require the user to be logged in
-    Route::group(['middleware' => 'auth'], function () {
+    Route::group(['middleware' => 'auth','middleware' => 'admin'], function () {
         // Authentication Routes
         Route::get('top', [TopController::class, 'index'])->name('top');
         Route::get('userinfo', [UserController::class, 'index'])->name('userinfo');

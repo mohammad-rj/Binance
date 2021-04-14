@@ -10,7 +10,7 @@ class TopController extends Controller
     //
     public function index()
     {
-        $telegram = new Api('BOT TOKEN');
+        /*$telegram = new Api('BOT TOKEN');
         $updates = $telegram->getUpdates();
         $response = $telegram->getMe();
         // Laravel
@@ -21,7 +21,7 @@ class TopController extends Controller
         $username = $response->getUsername();
         echo $botId."\r\n";
         echo $firstName."\r\n";
-        echo $username."\r\n";
-        //return view('admin.top');
+        echo $username."\r\n";*/
+        return view('admin.top');
     }
 }
