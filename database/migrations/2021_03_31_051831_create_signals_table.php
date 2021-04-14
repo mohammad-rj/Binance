@@ -15,15 +15,15 @@ class CreateSignalsTable extends Migration
     {
         Schema::create('signals', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('mark')->nullable();
-            $table->string('mode')->nullable();
+            $table->string('mark');
+            $table->string('mode');
             $table->dateTime('receivetime');
-            $table->float('entrymin')->unsigned()->nullable();
-            $table->float('entrymax')->unsigned()->nullable();
-            $table->float('firstprofit')->unsigned()->nullable();
-            $table->float('secondprofit')->unsigned()->nullable();
-            $table->float('thirdprofit')->unsigned()->nullable();
-            $table->float('lossprofit')->unsigned()->nullable();
+            $table->string('entrymin');
+            $table->string('entrymax');
+            $table->string('firstprofit');
+            $table->string('secondprofit');
+            $table->string('thirdprofit');
+            $table->string('lossprofit');
             $table->boolean('status')->default(0);
             $table->timestamps();
         });

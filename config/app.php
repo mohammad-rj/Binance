@@ -177,6 +177,7 @@ return [
         // Application Service Providers...
         Collective\Html\HtmlServiceProvider::class,
         adman9000\binance\BinanceServiceProvider::class,
+        Laravel\Ui\UiServiceProvider::class,
     ],
 
     /*

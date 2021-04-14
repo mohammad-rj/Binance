@@ -25,7 +25,7 @@ use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\SettingController;
 
 
-
+Auth::routes();
 /*
  * Access Controllers
  * All route names are prefixed with 'auth'.
