@@ -1,5 +1,16 @@
 @extends('layouts.app')
-
+<style>
+    .thead-dark{
+    color: white;
+    background-color: #3f3f3f;
+  }
+  .table{
+    text-align:center;
+  }
+  tr th{
+    text-align:center;
+  }
+</style>
 @section('header')
 
 <body id="pg_index" class="pg_index signal">
@@ -29,7 +40,44 @@
       </ol>
     </section>
     <section class="content margin">
-        
+      <div class="box-body table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>受信日</th>
+                <th>銘柄</th>
+                <th>建て</th>
+                <th>エントリーmin</th>
+                <th>エントリーmax</th>
+                <th>第1</th>
+                <th>第2</th>
+                <th>第3</th>
+                <th>損切り</th>
+                <th>モード</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach($signals as $signal)
+              <tr>
+                <th>{{ $signal->receivetime }}</th>
+                <td>{{ $signal->mark }}</td>
+                <td>{{ $signal->mode }}</td>
+                <td>{{ $signal->entrymin }}</td>
+                <td>{{ $signal->entrymax }}</td>
+                <td>{{ $signal->firstprofit }}</td>
+                <td>{{ $signal->secondprofit }}</td>
+                <td>{{ $signal->thirdprofit }}</td>
+                <th>{{ $signal->lossprofit }}</th>
+                <td>ー</td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+          {{-- Pagination --}}
+          <div class="d-flex justify-content-center">
+              {!! $signals->links() !!}
+          </div>
+        </div>
     </section>
   </aside><!-- /.right-side -->
   </div>
