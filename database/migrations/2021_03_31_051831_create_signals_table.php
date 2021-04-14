@@ -18,12 +18,12 @@ class CreateSignalsTable extends Migration
             $table->string('mark')->nullable();
             $table->string('mode')->nullable();
             $table->dateTime('receivetime');
-            $table->float('entrymin')->unsigned()->nullable();
-            $table->float('entrymax')->unsigned()->nullable();
-            $table->float('firstprofit')->unsigned()->nullable();
-            $table->float('secondprofit')->unsigned()->nullable();
-            $table->float('thirdprofit')->unsigned()->nullable();
-            $table->float('lossprofit')->unsigned()->nullable();
+            $table->string('entrymin')->nullable();
+            $table->string('entrymax')->nullable();
+            $table->string('firstprofit')->nullable();
+            $table->string('secondprofit')->nullable();
+            $table->string('thirdprofit')->nullable();
+            $table->string('lossprofit')->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();
         });
