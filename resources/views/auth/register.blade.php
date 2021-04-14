@@ -23,14 +23,14 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">新規ユーザー登録</h4>
-							<!-- <form method="POST"> -->
-							 
+							<form method="POST">
+							@csrf
 								<div class="form-group">
-									<input id="username" type="text" class="form-control" name="username" placeholder="noteのユーザー名">
+									<input id="username" type="text" class="form-control" name="username" placeholder="noteのユーザー名" required>
 								</div>
 
 								<div class="form-group">
-									<input id="email" type="email" class="form-control" name="email" placeholder="メールアドレス">
+									<input id="email" type="email" class="form-control" name="email" placeholder="メールアドレス" required>
 								</div>
 
 								<div class="form-group">
@@ -50,7 +50,7 @@
 								<div class="margin-top20 text-center">
 									<span>既にアカウントをお持ちの場合はログインしてください<spam><a href="{{route('auth.login')}}">ログイン</a>
 								</div>
-							<!-- </form> -->
+							</form>
 						</div>
 					</div>
 					<div class="footer">

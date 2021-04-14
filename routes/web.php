@@ -31,6 +31,9 @@ Auth::routes();
  * All route names are prefixed with 'auth'.
  */
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
+Route::group(["get","post"],function(){
+    Route::get('receiveSignal', [SignalController::class, 'receiveSignal'])->name('receiveSignal');
+});
 Route::group(['namespace' => 'Auth', 'as' => 'auth.'], function () {
     // These routes require the user to be logged in
     Route::group(['middleware' => 'auth'], function () {

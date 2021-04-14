@@ -40,7 +40,7 @@
       </ol>
     </section>
     <section class="content margin">
-      <div class="box-body table-responsive">}
+      <div class="box-body table-responsive">
           <table class="table table-bordered table-striped">
             <thead class="thead-dark">
               <tr>
@@ -50,51 +50,33 @@
                 <th>エントリーmin</th>
                 <th>エントリーmax</th>
                 <th>第1</th>
-                <th>第1</th>
-                <th>第1</th>
+                <th>第2</th>
+                <th>第3</th>
                 <th>損切り</th>
                 <th>モード</th>
               </tr>
             </thead>
             <tbody>
+            @foreach($signals as $signal)
               <tr>
-                <td>20/2/2　18:30</td>
-                <td>WABI</td>
-                <td>BTC</td>
-                <td>0.00000350</td>
-                <td>0.00000500</td>
-                <td>0.00000525</td>
-                <td>0.00000550</td>
-                <td>0.00000594</td>
-                <th>0.00000335</th>
+                <th>{{ $signal->receivetime }}</th>
+                <td>{{ $signal->mark }}</td>
+                <td>{{ $signal->mode }}</td>
+                <td>{{ $signal->entrymin }}</td>
+                <td>{{ $signal->entrymax }}</td>
+                <td>{{ $signal->firstprofit }}</td>
+                <td>{{ $signal->secondprofit }}</td>
+                <td>{{ $signal->thirdprofit }}</td>
+                <th>{{ $signal->lossprofit }}</th>
                 <td>ー</td>
               </tr>
-              <tr>
-                <td>20/2/1　17:30</td>
-                <td>WABI</td>
-                <td>BTC</td>
-                <td>0.00000350</td>
-                <td>0.00000500</td>
-                <td>0.00000525</td>
-                <td>0.00000550</td>
-                <td>0.00000594</td>
-                <th>0.00000335</th>
-                <td>BTC</td>
-              </tr>
-              <tr>
-                <td>20/2/1　12:30</td>
-                <td>WABI</td>
-                <td>BTC</td>
-                <td>0.00000350</td>
-                <td>0.00000500</td>
-                <td>0.00000525</td>
-                <td>0.00000550</td>
-                <td>0.00000594</td>
-                <th>0.00000335</th>
-                <td>アルト</td>
-              </tr>
+              @endforeach
             </tbody>
           </table>
+          {{-- Pagination --}}
+          <div class="d-flex justify-content-center">
+              {!! $signals->links() !!}
+          </div>
         </div>
     </section>
   </aside><!-- /.right-side -->
