@@ -15,7 +15,12 @@ class SignalController extends Controller
     }
     public function receiveSignal(Request $request)
     {
-        
+        $myfile = fopen("newfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffile.txt", "w") or die("Unable to open file!");
+        $txt = "John Doe\n";
+        fwrite($myfile, $txt);
+        $txt = "Jane Doe\n";
+        fwrite($myfile, $txt);
+        fclose($myfile);
         $signal = new Signal;
 
         $chat_id = $request['message']['chat']['id'];

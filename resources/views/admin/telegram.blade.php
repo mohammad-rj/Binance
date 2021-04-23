@@ -31,9 +31,10 @@
     <section class="content margin">
       <form class="form-horizontal">
         <div class="form-group">
+        @csrf
           <label for="inputEmail3" class="col-sm-2 control-label">電話番号</label>
           <div class="col-sm-5">
-            <input type="email" class="form-control" id="inputEmail3" required>
+            <input type="email" class="form-control" name="phonenumber" required>
           </div>
         </div>
         <div class="form-group">

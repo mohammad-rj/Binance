@@ -16,9 +16,9 @@ class CreateProfitSellTable extends Migration
         Schema::create('profitsell', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mode')->nullable();
-            $table->integer('firstprofit')->unsigned()->nullable();
-            $table->integer('secondprofit')->unsigned()->nullable();
-            $table->integer('thirdprofit')->unsigned()->nullable();
+            $table->float('firstprofit')->unsigned()->nullable();
+            $table->float('secondprofit')->unsigned()->nullable();
+            $table->float('thirdprofit')->unsigned()->nullable();
             $table->timestamps();
         });
     }

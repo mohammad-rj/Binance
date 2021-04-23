@@ -25,7 +25,6 @@ use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\SettingController;
 
 
-Auth::routes();
 /*
  * Access Controllers
  * All route names are prefixed with 'auth'.
@@ -74,9 +73,19 @@ Route::group(['namespace' => 'admin','prefix' => 'admin', 'as' => 'admin.'], fun
             Route::post('sell', [ProfitManagement::class, 'sellsetting'])->name('profitmanagement.sell');
         });
 
-        Route::get('mail', [MailController::class, 'index'])->name('mail');
-        Route::get('telegram', [TelegramController::class, 'index'])->name('telegram');
-        Route::get('admininfo', [AdmininfoController::class, 'index'])->name('admininfo');
+        Route::group(['namespace' => 'mail','prefix' => 'mail'], function () {
+            Route::get('/', [MailController::class, 'index'])->name('mail');
+            Route::post('register', [MailController::class, 'save'])->name('mail.register');
+            Route::post('send', [MailController::class, 'save'])->name('mail.send');
+        });
+        Route::group(['namespace' => 'telegram','prefix' => 'telegram'], function () {
+            Route::get('/', [TelegramController::class, 'index'])->name('telegram');
+            Route::post('register', [TelegramController::class, 'register'])->name('telegram.register');
+        });
+        Route::group(['namespace' => 'admininfo','prefix' => 'admininfo'], function () {
+            Route::get('/', [AdmininfoController::class, 'index'])->name('admininfo');
+            Route::post('register', [AdmininfoController::class, 'register'])->name('admininfo.register');
+        });
     });
 });
 

@@ -75,8 +75,7 @@ class RegisterController extends Controller
     }
     public function register(Request $request)
     {
-        var_dump($request->all());
         $this->create($request->all())->save();
-        redirect(route("auth.login"));
+        // redirect(route("auth.login"));
     }
 }
