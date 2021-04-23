@@ -21,6 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('confirmation_code');
             $table->rememberToken();
             $table->string('role')->default(0);
+            $table->string('binnaceKey');
+            $table->string('binnaceSecretKey');
+            $table->string('status');
             $table->timestamps();
         });
     }

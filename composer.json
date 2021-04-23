@@ -14,7 +14,11 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
         "telegram-bot-sdk/laravel": "^4.0@dev",
-        "telegram-bot-sdk/telegram-bot-sdk": "^4.0@dev"
+        "telegram-bot-sdk/telegram-bot-sdk": "^4.0@dev",
+        "setiawanhu/laravel-madeline-proto": "^0.1.0",
+        "danog/madelineproto": "^5.1",
+        "danog/tgseclib": "^3.0",
+        "paragonie/random_compat": ">=2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -27,6 +27,11 @@
     font-size: 15px;
     font-family: 'Noto Sans JP', sans-serif;
 }
+.invalid-feedback{
+    font-size: 12px;
+    color: lightcoral;
+    text-align: center;
+}
 .box-tools{
     text-align:right !important;
     /* margin-right:5px; */
@@ -76,9 +81,11 @@
     font-family: 'Noto Sans JP', sans-serif;
     padding:10px;
 }
+.alert-danger{
+    font-size: 15px;
+}
 .form-group input{
     font-size:15px;
-    text-align: center;
 }
 .form{
     margin-top:30px !important;

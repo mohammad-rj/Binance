@@ -16,26 +16,26 @@ class profitbuy extends Seeder
     public function run()
     {
         //
-        $users = [
+        $profitbuy = [
             [
                 'mode' => 'BTC',
-                'entrymin' => '5',
-                'entrymedium' => '3',
-                'entrymax' => '2',
+                'entrymin' => '0.05',
+                'entrymedium' => '0.03',
+                'entrymax' => '0.02',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'mode' => 'アルトシーズン',
                 'entrymin' => '0',
-                'entrymedium' => '5',
-                'entrymax' => '5',
+                'entrymedium' => '0.05',
+                'entrymax' => '0.05',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
         ];
 
-        DB::table('profitbuy')->insert($users);
+        DB::table('profitbuy')->insert($profitbuy);
 
     }
 }

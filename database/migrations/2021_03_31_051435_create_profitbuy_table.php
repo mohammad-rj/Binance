@@ -16,9 +16,9 @@ class CreateProfitBuyTable extends Migration
         Schema::create('profitbuy', function (Blueprint $table) {
             $table->increments('id');
             $table->string('mode')->nullable();
-            $table->integer('entrymin')->unsigned()->nullable();
-            $table->integer('entrymedium')->unsigned()->nullable();
-            $table->integer('entrymax')->unsigned()->nullable();
+            $table->float('entrymin')->unsigned()->nullable();
+            $table->float('entrymedium')->unsigned()->nullable();
+            $table->float('entrymax')->unsigned()->nullable();
             $table->timestamps();
         });
     }

@@ -16,26 +16,26 @@ class profitsell extends Seeder
     public function run()
     {
         //
-        $users = [
+        $profitsell = [
             [
                 'mode' => 'BTC',
-                'firstprofit' => '80',
-                'secondprofit' => '10',
-                'thirdprofit' => '10',
+                'firstprofit' => '0.8',
+                'secondprofit' => '0.1',
+                'thirdprofit' => '0.1',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'mode' => 'アルトシーズン',
-                'firstprofit' => '80',
-                'secondprofit' => '10',
-                'thirdprofit' => '10',
+                'firstprofit' => '0.5',
+                'secondprofit' => '0.5',
+                'thirdprofit' => '0',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
         ];
 
-        DB::table('profitsell')->insert($users);
+        DB::table('profitsell')->insert($profitsell);
 
     }
 }

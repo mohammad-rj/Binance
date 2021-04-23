@@ -6,7 +6,7 @@ use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Route;
 class AdminCheck
 {
     /**
@@ -19,6 +19,8 @@ class AdminCheck
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
+    
+        // dd(get_class_methods(get_class(auth())));
         if (auth()->check()) {
             if (auth()->user()->role) {
                 return $next($request);
